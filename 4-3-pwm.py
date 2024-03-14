@@ -1,10 +1,10 @@
 import RPi.GPIO as GPIO
 
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(8, GPIO.OUT)
+GPIO.setup(20, GPIO.OUT)
 
 n=10
-p = GPIO.PWM(8, 1000)
+p = GPIO.PWM(20, 1000)
 p.start(0)
 
 try:
@@ -15,5 +15,5 @@ try:
 
 finally:
     p.stop()
-    GPIO.output(8,0)
+    GPIO.output(20,0)
     GPIO.cleanup()
